@@ -40,7 +40,7 @@ tavily_client = TavilyClient(api_key=tavily_api_key)
 class Company(BaseModel):
     name: str
 
-# Chat endpoint for the agent to recieve comapny name
+# Chat endpoint for the agent to recieve company name
 @app.post("/chat")
 async def search_query(company : Company):
 
