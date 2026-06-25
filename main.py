@@ -17,9 +17,11 @@ load_dotenv()
 app = FastAPI()
 
 # CORS to let the backend talk to only our specified URLs
+origins = ["https://lead-gen-agent-alpha.vercel.app","http://localhost:5173"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials = True,
     allow_headers = ["*"],
     allow_methods = ["*"],
