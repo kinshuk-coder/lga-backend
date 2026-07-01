@@ -105,3 +105,7 @@ async def search_query(company : Company):
 
     # Calling the StreamingResponse class with our defined function    
     return StreamingResponse(stream_agent(),media_type="application/x-ndjson")    
+
+@app.get("/api/ping")    
+def ping():
+    return {"status":"ok"}
